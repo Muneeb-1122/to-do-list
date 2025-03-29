@@ -17,6 +17,19 @@ function initializeApp() {
         </div>`;
 
     setupEventListeners();
+    loadTasksFromLocalStorage(); // Load tasks on page refresh
+}
+
+// Load tasks from localStorage and display them
+function loadTasksFromLocalStorage() {
+    let userLocalStorage = JSON.parse(localStorage.getItem("GetData")) || [];
+    
+    if (userLocalStorage.length > 0) {
+        taskCards.innerHTML = ""; // Clear previous tasks
+        userLocalStorage.forEach(task => {
+            taskCards.innerHTML += createTaskCardHTML(task.title, task.description);
+        });
+    }
 }
 
 // Set up all event listeners

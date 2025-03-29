@@ -222,6 +222,7 @@ header {
   border-radius: var(--bdr-rds);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
   display: none;
+  z-index: 999;
 }
 
 .menu-item {
@@ -278,7 +279,7 @@ header {
   font-family: "poppins";
   color: #333;
   font-size: 0.75rem;
-  width: 70%;
+  width: 90%;
 }
 
 .menu-icon {
