@@ -214,6 +214,50 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: 3.5rem;  
+  right: 2.5rem;
+  background-color: var(--allCards-bg);
+  border-radius: var(--bdr-rds);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  display: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  gap: 3rem;
+}
+
+.menu-item:nth-child(1) {
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.menu-item:hover {
+  background-color: #f4f6f9;
+}
+
+.menu-text {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  color: var(--txt-clr);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .card-content {
   display: flex;
   align-items: flex-start;
