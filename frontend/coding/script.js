@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     addTaskBtn.addEventListener('click', showTaskBox);
 });
 
-function addTask() {
+function addTask(event) {
     const title = document.getElementById('task-title').value;
     const desc = document.getElementById('task-desc').value;
     if (!title || !desc) return alert('Please enter both Title and Description!');
@@ -32,6 +32,17 @@ function addTask() {
             <img class="menu-icon" src="../resources/icons/3 dots.svg" alt="Menu" />
         </div>`;
     
+    // retrieving local storage data
+    let userLocalStorage = JSON.parse(localStorage.getItem("GetData")) || [];
+    // Adding new task to the array
+    userLocalStorage.push({
+        title: title,
+        description: desc
+    });
+    // storing updated data in localStorage
+    localStorage.setItem("GetData", JSON.stringify(userLocalStorage));
+    console.log(userLocalStorage);
+    event.preventDefault();
     resetTaskBox();
 }
 

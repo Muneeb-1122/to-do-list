@@ -195,6 +195,7 @@ header {
 }
 
 .task-cards {
+  position: relative;
     display: none;
     align-items: center;
     justify-content: center;
@@ -321,5 +322,9 @@ header {
 
   .create-task-wrapper {
     padding: 1.2rem 0.8rem;
+  }
+
+  .task-cards {
+    margin: 1rem;
   }
 }
